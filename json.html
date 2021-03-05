@@ -7,23 +7,24 @@
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.serializeJSON/3.2.1/jquery.serializejson.min.js"></script>
       <script>
          $(document).ready(function() {
-             $("#submit").click(function() {
-                 var obj = $('#siteError').serializeJSON();
-                 var jsonString = JSON.stringify(obj);
-                 $.ajax({
-                     type: "POST",
-                     url: "json.php",
-                     data: jsonString,
-                     dataType: "json",
-                     success: function(data) {
-         				if(data.result[0].status == 'inserted'){
-							window.location.href = "http://stackoverflow.com";
+         	$("#submit").click(function() {
+         		var obj = $('#siteError').serializeJSON();
+         		var jsonString = JSON.stringify(obj);
+         		$.ajax({
+         			type: "POST",
+         			url: "json.php",
+         			data: jsonString,
+         			dataType: "json",
+         			success: function(data) {
+         				if (data.result[0].status == 'inserted') {
+         					window.location.href = "http://stackoverflow.com";
          				}
-                         console.log(data.result[0].status);
-                     }
-                 });
-             });
-         });         
+         				console.log(data.result[0].status);
+         			}
+         		});
+         	});
+         });      
+             
       </script>
    </head>
    <body>
