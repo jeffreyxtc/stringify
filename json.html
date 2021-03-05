@@ -16,7 +16,7 @@
          			data: jsonString,
          			dataType: "json",
          			success: function(data) {
-         				if (data.result[0].status == 'inserted') {
+         				if(data.result[0].status == 'inserted') {
          					window.location.href = "http://stackoverflow.com";
          				}
          				console.log(data.result[0].status);
