@@ -1,29 +1,35 @@
 <?php
-$v = '{ 
+header("Content-Type: application/json");
+header("Access-Control-Allow-Origin: *");
 
-   "import_set": "", 
-   "staging_table": "", 
-   "result":    [ 
-            { 
-         "transform_map": "", 
-         "table": "", 
-         "display_name": "", 
-         "display_value": "", 
-         "record_link": "", 
-         "status": "inserted", 
-         "sys_id": "" 
-      }, 
-            { 
-         "transform_map": "", 
-         "table": "", 
-         "display_name": "", 
-         "display_value": "", 
-         "record_link": "", 
-         "status": "inserted", 
-         "sys_id": "" 
-      } 
-   ] 
-}';
+$v = array (
+  'import_set' => '',
+  'staging_table' => '',
+  'result' => 
+  array (
+    0 => 
+    array (
+      'transform_map' => '',
+      'table' => '',
+      'display_name' => '',
+      'display_value' => '',
+      'record_link' => '',
+      'status' => 'inserted',
+      'sys_id' => '',
+    ),
+    1 => 
+    array (
+      'transform_map' => '',
+      'table' => '',
+      'display_name' => '',
+      'display_value' => '',
+      'record_link' => '',
+      'status' => 'inserted',
+      'sys_id' => '',
+    ),
+  ),
+);
 
-echo $v;
+echo json_encode($v);
+exit;
 ?>
